@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog AI — Aksara AI</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#1b1f2b; --amber:#c98a3d; --teal:#2f6f63; --paper-dim:#f1ead9; }
+  body { font-family:'Manrope',sans-serif; color:var(--ink); background:#faf6ef; }
+  h1,h2,h3,.navbar-brand { font-family:'Fraunces',serif; }
+  .navbar { background:#faf6ef !important; border-bottom:1px solid #e4dcc9; }
+  .navbar-brand span.mark { display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; background:var(--ink); color:var(--amber); border-radius:8px; font-family:'Fraunces',serif; font-weight:700; margin-right:8px; }
+  .nav-link { font-weight:500; }
+  .nav-link.active { color: var(--amber) !important; font-weight:700; }
+  .hero-blog { background:var(--ink); color:#faf6ef; padding:64px 0 48px; }
+  .hero-blog p { color:#c3c8d4; }
+  .filter-pill { border:1px solid #e4dcc9; border-radius:999px; padding:6px 16px; font-size:.88rem; color:#4a5164; background:#fff; }
+  .filter-pill.active { background:var(--ink); color:#faf6ef; border-color:var(--ink); }
+  .blog-card { border:1px solid #e4dcc9; border-radius:10px; overflow:hidden; transition:transform .2s ease, box-shadow .2s ease; background:#fff; height:100%; }
+  .blog-card:hover { transform:translateY(-4px); box-shadow:0 14px 30px -18px rgba(27,31,43,.35); }
+  .blog-card .cover { height:180px; background-size:cover; background-position:center; }
+  .badge-cat { background:var(--paper-dim); color:var(--teal); font-weight:600; }
+  .card-title a { color:var(--ink); text-decoration:none; }
+  .card-title a:hover { color:var(--amber); }
+  .meta { font-size:.85rem; color:#6b7280; }
+  .meta i { margin-right:4px; }
+  footer { background:var(--ink); color:#b8bdc9; }
+  footer a { color:#b8bdc9; text-decoration:none; }
+  footer a:hover { color:var(--amber); }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html"><span class="mark">A</span>Aksara AI</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ms-auto gap-lg-3">
+        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero-blog">
+  <div class="container">
+    <h1 class="display-6 fw-bold">Blog Aksara AI</h1>
+    <p class="mb-0">Catatan, panduan, dan perspektif seputar dunia kecerdasan buatan.</p>
+  </div>
+</header>
+
+<main class="container py-5">
+
+  <!-- Filter kategori (visual only) -->
+  <div class="d-flex flex-wrap gap-2 mb-5">
+    <span class="filter-pill active">Semua</span>
+    <span class="filter-pill">Generative AI</span>
+    <span class="filter-pill">Machine Learning</span>
+    <span class="filter-pill">Etika AI</span>
+    <span class="filter-pill">Tools</span>
+  </div>
+
+  <div class="row g-4">
+
+    <!-- Artikel 1 -->
+    <div class="col-md-6 col-lg-3">
+      <article class="blog-card">
+        <div class="cover" style="background-image:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80')"></div>
+        <div class="p-3">
+          <span class="badge badge-cat mb-2"><i class="bi bi-stars"></i> Generative AI</span>
+          <h3 class="h6 card-title"><a href="blog-detail.html">Memahami Generative AI dan Cara Kerjanya</a></h3>
+          <p class="small text-muted">Mengenal dasar generative AI, dari model bahasa hingga model gambar, dan bagaimana keduanya belajar menciptakan sesuatu yang baru.</p>
+          <div class="meta d-flex flex-wrap gap-3">
+            <span><i class="bi bi-person"></i>Dea Siregar</span>
+            <span><i class="bi bi-calendar3"></i>3 Sep 2026</span>
+            <span><i class="bi bi-clock"></i>6 mnt</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Artikel 2 -->
+    <div class="col-md-6 col-lg-3">
+      <article class="blog-card">
+        <div class="cover" style="background-image:url('https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&q=80')"></div>
+        <div class="p-3">
+          <span class="badge badge-cat mb-2"><i class="bi bi-chat-left-text"></i> Tools</span>
+          <h3 class="h6 card-title"><a href="blog-detail.html">Prompt Engineering untuk Pemula</a></h3>
+          <p class="small text-muted">Teknik dasar menyusun prompt yang efektif agar hasil dari LLM lebih relevan, konsisten, dan sesuai kebutuhan.</p>
+          <div class="meta d-flex flex-wrap gap-3">
+            <span><i class="bi bi-person"></i>Dea Siregar</span>
+            <span><i class="bi bi-calendar3"></i>28 Agu 2026</span>
+            <span><i class="bi bi-clock"></i>5 mnt</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Artikel 3 -->
+    <div class="col-md-6 col-lg-3">
+      <article class="blog-card">
+        <div class="cover" style="background-image:url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&q=80')"></div>
+        <div class="p-3">
+          <span class="badge badge-cat mb-2"><i class="bi bi-shield-check"></i> Etika AI</span>
+          <h3 class="h6 card-title"><a href="blog-detail.html">Etika AI: Tanggung Jawab di Balik Otomasi</a></h3>
+          <p class="small text-muted">Membahas isu bias data, privasi, dan transparansi yang perlu diperhatikan saat menerapkan sistem AI di perusahaan.</p>
+          <div class="meta d-flex flex-wrap gap-3">
+            <span><i class="bi bi-person"></i>Dea Siregar</span>
+            <span><i class="bi bi-calendar3"></i>20 Agu 2026</span>
+            <span><i class="bi bi-clock"></i>7 mnt</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Artikel 4 -->
+    <div class="col-md-6 col-lg-3">
+      <article class="blog-card">
+        <div class="cover" style="background-image:url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=80')"></div>
+        <div class="p-3">
+          <span class="badge badge-cat mb-2"><i class="bi bi-cpu"></i> Machine Learning</span>
+          <h3 class="h6 card-title"><a href="blog-detail.html">Computer Vision di Industri Manufaktur</a></h3>
+          <p class="small text-muted">Studi kasus penerapan computer vision untuk inspeksi kualitas produk secara otomatis pada lini produksi.</p>
+          <div class="meta d-flex flex-wrap gap-3">
+            <span><i class="bi bi-person"></i>Dea Siregar</span>
+            <span><i class="bi bi-calendar3"></i>12 Agu 2026</span>
+            <span><i class="bi bi-clock"></i>4 mnt</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Artikel 5 -->
+    <div class="col-md-6 col-lg-3">
+      <article class="blog-card">
+        <div class="cover" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80')"></div>
+        <div class="p-3">
+          <span class="badge badge-cat mb-2"><i class="bi bi-diagram-3"></i> Machine Learning</span>
+          <h3 class="h6 card-title"><a href="blog-detail.html">RAG: Membuat LLM Menjawab dengan Data Anda</a></h3>
+          <p class="small text-muted">Mengenal Retrieval-Augmented Generation (RAG) sebagai cara membuat chatbot menjawab berdasarkan dokumen internal.</p>
+          <div class="meta d-flex flex-wrap gap-3">
+            <span><i class="bi bi-person"></i>Dea Siregar</span>
+            <span><i class="bi bi-calendar3"></i>5 Agu 2026</span>
+            <span><i class="bi bi-clock"></i>8 mnt</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Artikel 6 -->
+    <div class="col-md-6 col-lg-3">
+      <article class="blog-card">
+        <div class="cover" style="background-image:url('https://images.unsplash.com/photo-1526378722484-bd91ca387e72?w=600&q=80')"></div>
+        <div class="p-3">
+          <span class="badge badge-cat mb-2"><i class="bi bi-gear-wide-connected"></i> Tools</span>
+          <h3 class="h6 card-title"><a href="blog-detail.html">Mengenal MLOps untuk Tim Kecil</a></h3>
+          <p class="small text-muted">Praktik dasar MLOps yang bisa diterapkan tim kecil agar model AI tetap andal setelah dirilis ke produksi.</p>
+          <div class="meta d-flex flex-wrap gap-3">
+            <span><i class="bi bi-person"></i>Dea Siregar</span>
+            <span><i class="bi bi-calendar3"></i>29 Jul 2026</span>
+            <span><i class="bi bi-clock"></i>6 mnt</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+  </div>
+
+  <!-- Pagination (opsional) -->
+  <nav class="mt-5" aria-label="Navigasi halaman blog">
+    <ul class="pagination justify-content-center">
+      <li class="page-item disabled"><a class="page-link" href="#">Sebelumnya</a></li>
+      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">Berikutnya</a></li>
+    </ul>
+  </nav>
+
+</main>
+
+<footer class="py-4">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+    <span>© 2026 Aksara AI. Seluruh hak cipta dilindungi.</span>
+    <div class="d-flex gap-3">
+      <a href="index.html">Beranda</a>
+      <a href="blog.html">Blog</a>
+      <a href="cv.html">CV</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
