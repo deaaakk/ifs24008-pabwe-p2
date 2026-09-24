@@ -4,25 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Memahami Generative AI dan Cara Kerjanya — Aksara AI</title>
+<meta name="description" content="Mengenal dasar generative AI, dari model bahasa hingga model gambar, dan bagaimana keduanya belajar menciptakan sesuatu yang baru.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root { --ink:#1b1f2b; --amber:#c98a3d; --teal:#2f6f63; --paper-dim:#f1ead9; }
+  :root { --ink:#1b1f2b; --ink-soft:#4a5164; --amber:#b45309; --teal:#2f6f63; --paper-dim:#f1ead9; }
   body { font-family:'Manrope',sans-serif; color:var(--ink); background:#faf6ef; }
   h1,h2,h3,.navbar-brand { font-family:'Fraunces',serif; }
   .navbar { background:#faf6ef !important; border-bottom:1px solid #e4dcc9; }
-  .navbar-brand span.mark { display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; background:var(--ink); color:var(--amber); border-radius:8px; font-family:'Fraunces',serif; font-weight:700; margin-right:8px; }
-  .nav-link { font-weight:500; }
+  .navbar-brand span.mark { display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; background:var(--ink); color:#c98a3d; border-radius:8px; font-family:'Fraunces',serif; font-weight:700; margin-right:8px; }
+  .nav-link { font-weight:500; color:var(--ink-soft) !important; }
   .nav-link.active { color: var(--amber) !important; font-weight:700; }
   .cover-full { height:360px; background-size:cover; background-position:center; border-radius:12px; }
-  .meta-bar { font-size:.92rem; color:#6b7280; }
+  .meta-bar { font-size:.92rem; color:var(--ink-soft); }
   .meta-bar i { margin-right:5px; }
   article.content p { font-size:1.06rem; line-height:1.8; color:#2c3140; }
   blockquote { border-left:4px solid var(--amber); padding:10px 20px; font-family:'Fraunces',serif; font-style:italic; color:var(--ink); background:var(--paper-dim); border-radius:0 8px 8px 0; }
   .related-card { border:1px solid #e4dcc9; border-radius:10px; overflow:hidden; background:#fff; transition:transform .2s ease; height:100%; }
   .related-card:hover { transform:translateY(-3px); }
   .related-card .cover-sm { height:110px; background-size:cover; background-position:center; }
+  .breadcrumb-item a { color: var(--teal); text-decoration: underline; }
+  .breadcrumb-item a:hover { color: var(--ink); }
+  .breadcrumb-item.active { color: var(--ink-soft); }
   .comment-box textarea { resize:vertical; }
   .avatar-circle { width:42px; height:42px; border-radius:50%; background:var(--ink); color:var(--amber); display:flex; align-items:center; justify-content:center; font-weight:700; }
   footer { background:var(--ink); color:#b8bdc9; }
@@ -32,21 +39,13 @@
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg sticky-top">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="index.html"><span class="mark">A</span>Aksara AI</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMain">
-      <ul class="navbar-nav ms-auto gap-lg-3">
-        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-      </ul>
-    </div>
-  </div>
+<!-- Navigasi -->
+<nav style="padding:14px 20px; border-bottom:1px solid #ccc; font-family:sans-serif; font-size:15px;">
+  <strong>Navigasi:</strong>
+  <a href="index.html">Beranda</a> |
+  <a href="blog.html">Blog</a> |
+  <a href="blog-detail.html">Detail Blog</a> |
+  <a href="cv.html">Curriculum Vitae</a>
 </nav>
 
 <main class="container py-5" style="max-width:820px;">
@@ -80,7 +79,7 @@
 
     <p>Bagi perusahaan, penerapan generative AI paling terasa manfaatnya ketika digabungkan dengan data internal — misalnya melalui pendekatan Retrieval-Augmented Generation (RAG) — sehingga jawaban yang dihasilkan tidak hanya relevan secara bahasa, tetapi juga akurat berdasarkan dokumen dan kebijakan perusahaan itu sendiri.</p>
 
-    <h3 class="h5 mt-4">Beberapa hal penting sebelum menerapkan generative AI:</h3>
+    <h2 class="h5 mt-4">Beberapa hal penting sebelum menerapkan generative AI:</h2>
     <ul>
       <li>Pastikan data yang digunakan untuk pelatihan atau referensi berkualitas dan relevan.</li>
       <li>Uji keluaran model secara berkala untuk memastikan akurasi dan menghindari bias.</li>

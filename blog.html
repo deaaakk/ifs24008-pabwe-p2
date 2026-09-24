@@ -4,16 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog AI — Aksara AI</title>
+<meta name="description" content="Blog Aksara AI — catatan, panduan, dan perspektif seputar dunia kecerdasan buatan.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root { --ink:#1b1f2b; --amber:#c98a3d; --teal:#2f6f63; --paper-dim:#f1ead9; }
+  :root { --ink:#1b1f2b; --ink-soft:#4a5164; --amber:#b45309; --teal:#2f6f63; --paper-dim:#f1ead9; }
   body { font-family:'Manrope',sans-serif; color:var(--ink); background:#faf6ef; }
   h1,h2,h3,.navbar-brand { font-family:'Fraunces',serif; }
   .navbar { background:#faf6ef !important; border-bottom:1px solid #e4dcc9; }
-  .navbar-brand span.mark { display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; background:var(--ink); color:var(--amber); border-radius:8px; font-family:'Fraunces',serif; font-weight:700; margin-right:8px; }
-  .nav-link { font-weight:500; }
+  .navbar-brand span.mark { display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; background:var(--ink); color:#c98a3d; border-radius:8px; font-family:'Fraunces',serif; font-weight:700; margin-right:8px; }
+  .nav-link { font-weight:500; color:var(--ink-soft) !important; }
   .nav-link.active { color: var(--amber) !important; font-weight:700; }
   .hero-blog { background:var(--ink); color:#faf6ef; padding:64px 0 48px; }
   .hero-blog p { color:#c3c8d4; }
@@ -25,7 +29,7 @@
   .badge-cat { background:var(--paper-dim); color:var(--teal); font-weight:600; }
   .card-title a { color:var(--ink); text-decoration:none; }
   .card-title a:hover { color:var(--amber); }
-  .meta { font-size:.85rem; color:#6b7280; }
+  .meta { font-size:.85rem; color:var(--ink-soft); }
   .meta i { margin-right:4px; }
   footer { background:var(--ink); color:#b8bdc9; }
   footer a { color:#b8bdc9; text-decoration:none; }
@@ -34,21 +38,13 @@
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg sticky-top">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="index.html"><span class="mark">A</span>Aksara AI</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMain">
-      <ul class="navbar-nav ms-auto gap-lg-3">
-        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-      </ul>
-    </div>
-  </div>
+<!-- Navigasi -->
+<nav style="padding:14px 20px; border-bottom:1px solid #ccc; font-family:sans-serif; font-size:15px;">
+  <strong>Navigasi:</strong>
+  <a href="index.html">Beranda</a> |
+  <a href="blog.html">Blog</a> |
+  <a href="blog-detail.html">Detail Blog</a> |
+  <a href="cv.html">Curriculum Vitae</a>
 </nav>
 
 <!-- Hero -->
@@ -60,6 +56,8 @@
 </header>
 
 <main class="container py-5">
+
+  <h2 class="h4 mb-3">Artikel Terbaru</h2>
 
   <!-- Filter kategori (visual only) -->
   <div class="d-flex flex-wrap gap-2 mb-5">
